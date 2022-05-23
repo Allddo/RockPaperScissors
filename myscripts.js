@@ -23,30 +23,60 @@ function playRound(playerSelection, computerSelection){
         playerSelection = playerSelection.toLowerCase();
 
         if(playerSelection == 'rock' && computerSelection == 'paper'){
-            return("You Lose! Paper beats Rock");
+            return("Round Result: You Lose! Paper beats Rock");
         }
         else if(playerSelection == 'rock' && computerSelection == 'scissors'){
-            return("You Win! Rock beats Scissors");
+            return("Round Result: You Win! Rock beats Scissors");
         }
         else if(playerSelection == 'paper' && computerSelection == 'rock'){
-            return("You Win! Paper beats Rock");
+            return("Round Result: You Win! Paper beats Rock");
         }
         else if(playerSelection == 'paper' && computerSelection == 'scissors'){
-            return("You Lose! Scissors beats Paper");
+            return("Round Result: You Lose! Scissors beats Paper");
         }
         else if(playerSelection == 'scissors' && computerSelection == 'rock'){
-            return("You Lose! Rock beats Scissors");
+            return("Round Result: You Lose! Rock beats Scissors");
         }
         else if(playerSelection == 'scissors' && computerSelection == 'paper'){
-            return("You Win! Scissors beats Paper");
+            return("Round Result: You Win! Scissors beats Paper");
         }
         else{
-            return("Tie");
+            return("Round Result: Tie");
         }
 
     }
 }
 
-let playerSelection = prompt("Choose Rock, Paper, or Scissors.");
-let computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+function game(){
+    let playerWinCount = 0;
+    let computerWinCount = 0;
+
+    for(let i = 0; i < 5; i++){
+
+        let playerSelection = prompt("Choose Rock, Paper, or Scissors.");
+        let computerSelection = computerPlay();
+
+        let roundWinner = playRound(playerSelection, computerSelection);
+        if(roundWinner.includes("Win")){
+            playerWinCount++;
+        }
+        else{
+            computerWinCount++;
+        }
+
+        console.log(roundWinner);
+    }
+
+    if(playerWinCount > computerWinCount){
+        return("Match Result: You Win!");
+    }
+    else if(computerWinCount > playerWinCount){
+        return("Match Result: You Lose, Computer Wins.");
+    }
+    else{
+        return("Match Result: Tie.")
+    }
+
+}
+
+console.log(game());
