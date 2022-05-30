@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="myscripts.js"></script>
+  <link href="http://fonts.cdnfonts.com/css/callie-chalk-font" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="myscripts.js" defer></script>
   <meta charset="UTF-8">
-  <title>Page Title</title>
+  <title>Rock - Paper - Scissors</title>
 </head>
 <body>
-  
+
+  <div class="webpage">
+
+      <div class="header">Rock, Paper, or Scissors?</div>
+
+      <div class="bodyContainer">
+
+        <div class="buttonContainer">
+
+          <button class="rock"></button>
+          <button class="paper"></button>
+          <button class="scissors"></button>
+
+        </div>
+
+        <div class="results">
+          <p id="results">Round Result:</p>
+          <p id="score">Score:</p>
+          <p id="declareWinner">Winner:</p>
+        </div>
+
+      </div>
+
+  </div>
+
+  <div class="underneath">
+    <p id="finalText">Temp Text</p>
+    <img class="robot" src="robot.png"/>
+    <img class="trophy" src="trophy.png"/>
+    <button class="restart" onclick="location.href ='javascript.html';">Restart</button>
+  </div>
+
+  <style>
+    @import url('http://fonts.cdnfonts.com/css/callie-chalk-font');
+  </style>
 </body>
 </html>
