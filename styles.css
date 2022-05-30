@@ -8,13 +8,13 @@ button{
 }
 
 body{
-    min-height: 100%;
+    min-height: 1000px;
     background-color: whitesmoke;
     border: 3px solid black;
 }
 
 .bodyContainer{
-    min-height: 100%;
+    min-height: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
