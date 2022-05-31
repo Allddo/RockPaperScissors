@@ -144,8 +144,8 @@ button.restart:active{
     text-align: center;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
-    gap: 100px;
+    padding: 90px;
+    gap: 80px;
     font-family: 'Callie Chalk Font', sans-serif, 'Times New Roman';
     font-size: 40px;
     width: auto;
